@@ -30,7 +30,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Send"/>
                                 <connections>
-                                    <segue destination="t3d-67-Fxe" kind="show" id="FKv-lr-tbl"/>
+                                    <action selector="sendPressedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Ie-fz-LN9"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="dYT-d4-rFT">
@@ -59,16 +59,21 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dYT-d4-rFT" secondAttribute="trailing" constant="80" id="y4x-17-D9H"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginTF" destination="9WF-zJ-PGc" id="3GO-vB-Ghk"/>
+                        <outlet property="passwordTF" destination="SNq-nw-TEH" id="24T-BY-tMr"/>
+                        <segue destination="t3d-67-Fxe" kind="show" identifier="detailSegue" id="1xc-6i-86g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="73.660714285714278"/>
         </scene>
-        <!--View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="fjz-rX-OhE">
             <objects>
-                <viewController id="t3d-67-Fxe" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="nmS-6a-4E7">
+                <viewController id="t3d-67-Fxe" customClass="SecondViewController" customModule="PassDataProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nmS-6a-4E7" customClass="Sec">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -79,6 +84,9 @@
                                 <color key="tintColor" red="0.098819217589999994" green="0.23064956319999999" blue="0.47716836829999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="sendPressedWithButton:" destination="t3d-67-Fxe" eventType="touchUpInside" id="f8B-ia-Se5"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="glm-CU-WTz">
                                 <rect key="frame" x="87" y="216" width="241" height="80"/>
@@ -93,6 +101,9 @@
                         <color key="backgroundColor" red="0.098819217589999994" green="0.23064956319999999" blue="0.47716836829999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" id="z82-UL-yGk"/>
+                    <connections>
+                        <outlet property="label" destination="glm-CU-WTz" id="GbA-cT-fhe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ze6-So-fkz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
