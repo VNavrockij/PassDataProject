@@ -13,7 +13,7 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
     
     @IBAction func sendPressed(button: UIButton) {
-        
+        performSegue(withIdentifier: "unwindSegue", sender: nil)
     }
     
     override func viewDidLoad() {
